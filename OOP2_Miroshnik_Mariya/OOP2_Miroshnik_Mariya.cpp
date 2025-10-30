@@ -97,7 +97,7 @@ public:
     char* text; //Символьная строка 
     size_t length; //Длина строки
 
-    // Конструктор по умолчанию (ОБЯЗАТЕЛЬНО!)
+    // Конструктор по умолчанию 
     Line() : text(nullptr), length(0) {} 
 
     //Инициализация строки — метод с параметром массивом символов
@@ -112,6 +112,7 @@ public:
         strcpy_s(text, len + 1, str);
         length = len;
     }
+
     // Конструктор копирования (глубокое копирование)
     Line(const Line& other) : text(nullptr), length(0) {
         if (other.text != nullptr) {
